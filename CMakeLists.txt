@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Servo_Potentiometer_OLED Servo_Potentiometer_OLED.c )
+add_executable(Servo_Potentiometer_OLED Servo_Potentiometer_OLED.c pico-ssd1306/ssd1306.c)
 
 pico_set_program_name(Servo_Potentiometer_OLED "Servo_Potentiometer_OLED")
 pico_set_program_version(Servo_Potentiometer_OLED "0.1")
@@ -49,10 +49,11 @@ target_link_libraries(Servo_Potentiometer_OLED
         pico_stdlib
         hardware_adc
         hardware_pwm
+        hardware_i2c
         )
 
 # Add the standard include files to the build
-target_include_directories(Servo_Potentiometer_OLED PRIVATE
+target_include_directories(Servo_Potentiometer_OLED PRIVATE pico-ssd1306
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
