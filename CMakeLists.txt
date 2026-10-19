@@ -46,7 +46,10 @@ pico_enable_stdio_usb(Servo_Potentiometer_OLED 1)
 
 # Add the standard library to the build
 target_link_libraries(Servo_Potentiometer_OLED
-        pico_stdlib)
+        pico_stdlib
+        hardware_adc
+        hardware_pwm
+        )
 
 # Add the standard include files to the build
 target_include_directories(Servo_Potentiometer_OLED PRIVATE
