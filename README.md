@@ -1,6 +1,6 @@
 # Servo Potentiometer OLED Controller
 
-<img src="Circuit_Image.jpg" style="transform: rotate(0deg);">
+<img src="Circuit_Image.jpg">
 
 ## Overview
 This project uses a Raspberry Pi Pico 2 W to control an SG90 servo motor using a potentiometer. The potentiometer position is read using the Pico's ADC, converted to an angle, and used to command the servo. An SSD1306 OLED display shows the current ADC reading and servo angle in real time.
