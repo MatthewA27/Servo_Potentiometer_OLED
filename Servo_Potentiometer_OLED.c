@@ -62,7 +62,7 @@ int main()
 
         int angle = adc_value * 180 / 4095;
 
-        // Map 0-180° to 1000-2000 µs
+        // Map 0-180° to 500-2500 µs
         int pulse_width = 500 + (angle * 2000 / 180);
 
         pwm_set_gpio_level(SERVO_PIN, pulse_width);
